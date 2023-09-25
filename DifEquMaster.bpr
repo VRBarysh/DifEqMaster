@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="DifEquMaster.exe"/>
+    <OBJFILES value="DifEquMaster.obj MainForm.obj EquBaseAbstract.obj EquGraph.obj 
+      EquBaseMaster.obj EquBaseThread.obj Equation01.obj Equation02.obj 
+      OpticParaBasicEqu.obj Equ25DEl01.obj EquBaseDump.obj Dump25DElModel.obj 
+      CephesLib.obj Dump25DElForm.obj Gr3DPlane.obj Equ25DEl02.obj 
+      Equ25DEl03.obj EquOptic2DMasterForm.obj EquOptic2D.obj FFTUnit.obj 
+      Dump2DOpticsForm.obj EquOptic2D01.obj Dump2DOpticModel.obj 
+      EquOptic2D02.obj EquOptic2D03.obj EquOptic2D04.obj Cell2D01.obj 
+      Equ25DEl04.obj Equ25DEl05.obj MultiMaxPSO.obj PSOFormUnit.obj 
+      EquPSO2DBraggSolver.obj PSOSolveMasterForm.obj SimplePSO.obj MTempPSO.obj 
+      EquBaseTask.obj EquTaskThread.obj EquOpticTask.obj EquOptic2D_X_01.obj 
+      EquOptic2D_X_02.obj EquOptic2D_X_03.obj EquOpticTask_2Way.obj 
+      SplineUnit.obj Dump2WaveElModel.obj Equ2WaveElModel.obj 
+      EquOptic2D_1DwB.obj EquOptic2D_1DwB_Mod1.obj Equ2WaveTask.obj 
+      EquOptic_X_04.obj EquOpticTask_BMB_holes.obj EquOpticTask_BMB.obj 
+      EquOpticTask_MultiMedia.obj EquOptic2D_X_MultiMedia.obj 
+      EquOptic2D_X_Multimedia2.obj EquOpticTask_2BraggsSolidMedia.obj 
+      EquOpticTask_Wide1DBragg.obj EquOpticTask_2D1D2DSolidMedia.obj"/>
+    <RESFILES value="DifEquMaster.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) MainForm.dfm Equation01.dfm Equation02.dfm 
+      OpticParaBasicEqu.dfm Equ25DEl01.dfm EquBaseDump.dfm Dump25DElForm.dfm 
+      EquOptic2DMasterForm.dfm Dump2DOpticsForm.dfm PSOFormUnit.dfm 
+      PSOSolveMasterForm.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="vclx.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib vclx.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi nmfast.bpi webdsnap.bpi bcbie.bpi 
+      websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi indy.bpi 
+      bcb2kaxserver.bpi inetdb.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="DifEquMaster.cpp"/>
+    <INCLUDEPATH value="&quot;C:\Program Files (x86)\Borland\CBuilder6\Projects&quot;;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;..\DifEquMaster back&quot;;d:\CBuilder6\Projects;..\double;..\WEquV6;..\DifEquMaster;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="&quot;C:\Program Files (x86)\Borland\CBuilder6\Projects&quot;;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;..\DifEquMaster back&quot;;d:\CBuilder6\Projects;..\double;..\WEquV6;..\DifEquMaster;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I&quot;C:\Program Files (x86)\Borland\CBuilder6\Projects&quot; 
+      -I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; -I&quot;..\DifEquMaster back&quot; 
+      -Id:\CBuilder6\Projects -I..\double -I..\WEquV6 -I..\DifEquMaster 
+      -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -ff -X- -a8 -6 -b- -k- -vi -c -tW 
+      -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="DifEquMaster.res" FORMNAME="" UNITNAME="DifEquMaster.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DifEquMaster.cpp" FORMNAME="" UNITNAME="DifEquMaster" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MainForm.cpp" FORMNAME="Form1" UNITNAME="MainForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquBaseAbstract.cpp" FORMNAME="" UNITNAME="EquBaseAbstract" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquGraph.cpp" FORMNAME="" UNITNAME="EquGraph" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquBaseMaster.cpp" FORMNAME="" UNITNAME="EquBaseMaster" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquBaseThread.cpp" FORMNAME="" UNITNAME="EquBaseThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Equation01.cpp" FORMNAME="DummyForm" UNITNAME="Equation01" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Equation02.cpp" FORMNAME="DummyForm2" UNITNAME="Equation02" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OpticParaBasicEqu.cpp" FORMNAME="FormOpticBasic" UNITNAME="OpticParaBasicEqu" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Equ25DEl01.cpp" FORMNAME="FormEqu25DEl01" UNITNAME="Equ25DEl01" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquBaseDump.cpp" FORMNAME="DumpForm" UNITNAME="EquBaseDump" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dump25DElModel.cpp" FORMNAME="" UNITNAME="Dump25DElModel" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CephesLib.cpp" FORMNAME="" UNITNAME="CephesLib" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dump25DElForm.cpp" FORMNAME="Dump25DEl" UNITNAME="Dump25DElForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Gr3DPlane.cpp" FORMNAME="" UNITNAME="Gr3DPlane" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Equ25DEl02.cpp" FORMNAME="" UNITNAME="Equ25DEl02" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Equ25DEl03.cpp" FORMNAME="" UNITNAME="Equ25DEl03" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2DMasterForm.cpp" FORMNAME="EquOptic2DForm" UNITNAME="EquOptic2DMasterForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D.cpp" FORMNAME="" UNITNAME="EquOptic2D" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FFTUnit.cpp" FORMNAME="" UNITNAME="FFTUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dump2DOpticsForm.cpp" FORMNAME="Dump2DOpticsForm" UNITNAME="Dump2DOpticsForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D01.cpp" FORMNAME="" UNITNAME="EquOptic2D01" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dump2DOpticModel.cpp" FORMNAME="" UNITNAME="Dump2DOpticModel" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D02.cpp" FORMNAME="" UNITNAME="EquOptic2D02" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D03.cpp" FORMNAME="" UNITNAME="EquOptic2D03" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D04.cpp" FORMNAME="" UNITNAME="EquOptic2D04" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Cell2D01.cpp" FORMNAME="" UNITNAME="Cell2D01" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Equ25DEl04.cpp" FORMNAME="" UNITNAME="Equ25DEl04" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Equ25DEl05.cpp" FORMNAME="" UNITNAME="Equ25DEl05" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MultiMaxPSO.cpp" FORMNAME="" UNITNAME="MultiMaxPSO" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PSOFormUnit.cpp" FORMNAME="PSOForm" UNITNAME="PSOFormUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquPSO2DBraggSolver.cpp" FORMNAME="" UNITNAME="EquPSO2DBraggSolver" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PSOSolveMasterForm.cpp" FORMNAME="PSOSolverForm" UNITNAME="PSOSolveMasterForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SimplePSO.cpp" FORMNAME="" UNITNAME="SimplePSO" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MTempPSO.cpp" FORMNAME="" UNITNAME="MTempPSO" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquBaseTask.cpp" FORMNAME="" UNITNAME="EquBaseTask" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquTaskThread.cpp" FORMNAME="" UNITNAME="EquTaskThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOpticTask.cpp" FORMNAME="" UNITNAME="EquOpticTask" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D_X_01.cpp" FORMNAME="" UNITNAME="EquOptic2D_X_01" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D_X_02.cpp" FORMNAME="" UNITNAME="EquOptic2D_X_02" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D_X_03.cpp" FORMNAME="" UNITNAME="EquOptic2D_X_03" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOpticTask_2Way.cpp" FORMNAME="" UNITNAME="EquOpticTask_2Way" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SplineUnit.cpp" FORMNAME="" UNITNAME="SplineUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dump2WaveElModel.cpp" FORMNAME="" UNITNAME="Dump2WaveElModel" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Equ2WaveElModel.cpp" FORMNAME="" UNITNAME="Equ2WaveElModel" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D_1DwB.cpp" FORMNAME="" UNITNAME="EquOptic2D_1DwB" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D_1DwB_Mod1.cpp" FORMNAME="" UNITNAME="EquOptic2D_1DwB_Mod1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Equ2WaveTask.cpp" FORMNAME="" UNITNAME="Equ2WaveTask" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic_X_04.cpp" FORMNAME="" UNITNAME="EquOptic_X_04" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOpticTask_BMB_holes.cpp" FORMNAME="" UNITNAME="EquOpticTask_BMB_holes" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOpticTask_BMB.cpp" FORMNAME="" UNITNAME="EquOpticTask_BMB" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOpticTask_MultiMedia.cpp" FORMNAME="" UNITNAME="EquOpticTask_MultiMedia" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D_X_MultiMedia.cpp" FORMNAME="" UNITNAME="EquOptic2D_X_MultiMedia" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOptic2D_X_Multimedia2.cpp" FORMNAME="" UNITNAME="EquOptic2D_X_Multimedia2" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOpticTask_2BraggsSolidMedia.cpp" FORMNAME="" UNITNAME="EquOpticTask_2BraggsSolidMedia" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOpticTask_Wide1DBragg.cpp" FORMNAME="" UNITNAME="EquOpticTask_Wide1DBragg" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="EquOpticTask_2D1D2DSolidMedia.cpp" FORMNAME="" UNITNAME="EquOpticTask_2D1D2DSolidMedia" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1049
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Excluded Packages]
+c:\program files (x86)\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
+[HistoryLists\hlIncludePath]
+Count=6
+Item0=C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\Projects;..\DifEquMaster back;d:\CBuilder6\Projects;..\double;..\WEquV6;..\DifEquMaster;$(BCB)\include;$(BCB)\include\vcl
+Item1=C:\Program Files\Borland\CBuilder6\Projects;..\DifEquMaster back;d:\CBuilder6\Projects;..\double;..\WEquV6;..\DifEquMaster;$(BCB)\include;$(BCB)\include\vcl
+Item2=..\DifEquMaster back;d:\CBuilder6\Projects;..\double;..\WEquV6;..\DifEquMaster;$(BCB)\include;$(BCB)\include\vcl
+Item3=d:\CBuilder6\Projects;..\double;..\WEquV6;..\DifEquMaster;$(BCB)\include;$(BCB)\include\vcl
+Item4=..\double;..\WEquV6;..\DifEquMaster;$(BCB)\include;$(BCB)\include\vcl
+Item5=..\WEquV6;..\DifEquMaster;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=6
+Item0=C:\Program Files (x86)\Borland\CBuilder6\Projects;C:\Program Files\Borland\CBuilder6\Projects;..\DifEquMaster back;d:\CBuilder6\Projects;..\double;..\WEquV6;..\DifEquMaster;$(BCB)\lib\obj;$(BCB)\lib
+Item1=C:\Program Files\Borland\CBuilder6\Projects;..\DifEquMaster back;d:\CBuilder6\Projects;..\double;..\WEquV6;..\DifEquMaster;$(BCB)\lib\obj;$(BCB)\lib
+Item2=..\DifEquMaster back;d:\CBuilder6\Projects;..\double;..\WEquV6;..\DifEquMaster;$(BCB)\lib\obj;$(BCB)\lib
+Item3=d:\CBuilder6\Projects;..\double;..\WEquV6;..\DifEquMaster;$(BCB)\lib\obj;$(BCB)\lib
+Item4=..\double;..\WEquV6;..\DifEquMaster;$(BCB)\lib\obj;$(BCB)\lib
+Item5=..\WEquV6;..\DifEquMaster;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+  </IDEOPTIONS>
+</PROJECT>
