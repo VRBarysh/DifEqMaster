@@ -25,8 +25,31 @@ Additionally, there are some libraries with mathematical tools:
 * CephesLib (.h/.cpp)  with Fresnel integral computation functions that I’ve took from Cephes Mathematical Library. It is quite an old library and https://github.com/jeremybarnes/cephes is the only working reference on it that I’ve found
   
 ### Free electron models
-Direct simulation of free electron systems can be complicated by a huge mismatch of scale. Electron beams can propagate for more then 20 meters in a free electron laser, while it can be critically important to keep track of electron’s positions with sub-nanometer precision.
-Excitation process in free electron lasers, backward wave oscillators and a number of other free electron devices can be simulated with a partical-in-cell (PIC) technique that groups a large amount of free electrons in a “super particle” with a macroscopic size, but similar phase. This technique effectively separates “positions” of the electron beam parts and their phases
-described as three wave interaction process between two electromagnetic waves and one electron beam current wave
 
-Classes for free-electron models
+Direct simulation of free electron systems can be complicated by a huge mismatch of scale. Electron beams can propagate for more then 20 meters in some free electron lasers, while it can be critically important to keep track of electron’s positions with sub-nanometer precision. In those systems excitation process can be simulated with a technique known as “particle-in-cell” (PIC) that groups a large number of free electrons in a “super particle” with a macroscopic size, but similar electron phases. This technique separates “approximate positions” of the electron beam parts and their phases, which effectively are “precise positions relative to the electromagnetic wave”.
+
+In this part of the project we implement several systems of 2D and 3D differential equations with partial derivatives to simulate and optimize various free electron devices like free electron lasers and backward wave oscillators. They take into account relativistic effects, Doppler effects, transverse electron oscillations, thermal velocity distribution inside electron beams, channeling of electromagnetic radiation by electron beams. 
+
+All of this is split into following files:
+
+Equ2WaveElModel, Equ2WaveTask, Equ2WaveElModel, Equ2WaveTask, Equ25DEl01, Equ25DEl02, Equ25DEl03, Equ25DEl04, Equ25DEl05, Equ25DEl06, EquOldLBVUnit (all names are pairs of .h/.cpp files) 
+
+### Solid-state distributed feedback laser models
+
+This part of the project describes various laser structures with 1D and 2D distributed feedback. The main goal here is demonstrating the excitation process that begins with spontaneous radiation and results in steady-state radiation regimes.  Simulated and demonstrated effects here include spatial synchronization of radiation across two dimensions, interference of two propagating waves that results in spatial hole burning, synchronization of multichannel laser structures, mutual scattering of several electromagnetic waves.
+The complicated part here is producing a mathematically stable procedure for calculating mutually scattering waves. Most typical procedures like Runge-Kutta methods for differential equations proved to be unstable for considered cases. Consequently, we use a semi-implicit procedure for making a time domain step. Additionally, electromagnetic waves that propagate in different directions complicate splitting the step procedure into separate spatial regions for multithreading.
+
+This part of the project is split into following files:
+
+EquOptic2DMasterForm, EquOpticTask, EquOptic2D, EquOptic2D_1DwB, EquOptic2D_1DwB_Mod1, EquOptic2D_MultiMedia, EquOptic2D_X_01, EquOptic2D_X_02, EquOptic2D_X_03, EquOptic_X_04, EquOptic2D_X_MultiMedia, EquOptic2D_X_Multimedia2, EquOptic2D01, EquOptic2D02, EquOptic2D03, EquOptic2D04, EquOpticTask_2BraggsSolidMedia, EquOpticTask_2D1D2DSolidMedia, EquOpticTask_2Way, EquOpticTask_BMB, EquOpticTask_BMB_holes, EquOpticTask_MultiMedia, EquOpticTask_Wide1DBragg, EquPSO2DBraggSolver (all names are pairs of .h/.cpp files) 
+
+## Addendum/Disclamer/Conclusion
+
+As mentioned before, this project became the basis for my Master and Ph.D. degrees works as well as a variety of published scientific articles. Most of the articles can be found here:
+https://www.researchgate.net/scientific-contributions/V-R-Baryshev-32973328
+
+With that being said, I must admit that both the project structure and its C++ Builder platform are a bit outdated. Partially, this is a result of the project's 20 years lifespan. Something was being constantly altered and added for this whole time and it creates a mess. Also, with me being the sole owner, producer, designer, QA and end user, it was tempting to skip some household cleaning with "I only need to run it once and get the result" attitude. This approach gave way for even more mess, regrettably.
+
+
+
+
