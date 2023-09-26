@@ -1,8 +1,8 @@
 # DifEqMaster
-A personal C++-based framework for solving some time-domain equation systems
+A personal C++-based framework for solving some time-domain partial differential equation systems 
 
 ## Introduction
-This project began in 2002 as an attempt to summarize and systematize some multidimensional differential equation solvers for that I've made for computing a number of problems in free electronic devices. I wanted to put some standalone code for simulating excitation processes in free electron lasers and backward wave oscillators under a universal platform. That C++ Builder based platform helped me with setting dozens of parameters, following the simulation process in real-time and presenting the result graphs in a more unified and convenient way. Equations for some other laser systems were added for simulation in the following years with general focus being shifted into solid state laser structures with 1D and 2D distributed feedback. Various tools and techniques were utilized for smoothing both computation process and interpretation of the results. Some notable additions include multithreading, FFT-based spectrum analysis, particle swarm techniques for automatic optimization of laser parameters. Combined results of this project became the basis of my 2004 Master and 2010 Ph.D. degrees as well as over 20 published articles in peer-reviewed journals and conference speeches from 2004 to 2023.
+This project began in 2002 as an attempt to summarize and systematize some multidimensional differential equation solvers that I've made for numerical simulation of vacuum electronic radiation sources. I wanted to put my standalone code for simulating excitation processes in free electron lasers and backward wave oscillators under a universal platform. That C++ Builder based platform helped me with setting dozens of parameters, following the simulation process in realtime and presenting the result graphs in a more unified and convenient way. Differential equation systems for some other types of lasers were added for simulation in the following years with general focus being shifted into solid state laser structures with 1D and 2D distributed feedback. Various tools and techniques were utilized for smoothing both computation process and interpretation of the results. Some notable additions include multithreading, FFT-based spectrum analysis, particle swarm techniques for automatic optimization of laser parameters. Combined results of this project became the basis of my Master and Ph.D. degrees as well as over 20 published articles in peer-reviewed journals and conference speeches from 2004 to 2023.
 
 ## Project Structure
 ### Common Files
@@ -21,8 +21,8 @@ Additionally, there are some libraries with mathematical tools:
 
 * FFTUnit (.h/.cpp) with Fourier transformations
 * SplineUnit (.h/.cpp)   with spline approximations
-* MultiMaxPSO (.h/.cpp)  and other PSO-named files with my implementations of the Partical Swarm Optimization technique
-* CephesLib (.h/.cpp)  with Fresnel integral computation functions that I’ve took from Cephes Mathematical Library. It is quite an old library and https://github.com/jeremybarnes/cephes is the only working reference on it that I’ve found
+* MultiMaxPSO (.h/.cpp)  and other PSO-named files with my implementations of the Particle Swarm Optimization technique
+* CephesLib (.h/.cpp)  with Fresnel integral computation functions that I’ve took from Cephes Mathematical Library. It is quite an old library and https://github.com/jeremybarnes/cephes is the only working reference for it that I’ve found
   
 ### Free electron models
 
@@ -37,7 +37,7 @@ Equ2WaveElModel, Equ2WaveTask, Equ2WaveElModel, Equ2WaveTask, Equ25DEl01, Equ25D
 ### Solid-state distributed feedback laser models
 
 This part of the project describes various laser structures with 1D and 2D distributed feedback. The main goal here is demonstrating the excitation process that begins with spontaneous radiation and results in steady-state radiation regimes.  Simulated and demonstrated effects here include spatial synchronization of radiation across two dimensions, interference of two propagating waves that results in spatial hole burning, synchronization of multichannel laser structures, mutual scattering of several electromagnetic waves.
-The complicated part here is producing a mathematically stable procedure for calculating mutually scattering waves. Most typical procedures like Runge-Kutta methods for differential equations proved to be unstable for considered cases. Consequently, we use a semi-implicit procedure for making a time domain step. Additionally, electromagnetic waves that propagate in different directions complicate splitting the step procedure into separate spatial regions for multithreading.
+The complicated part here is producing a mathematically stable procedure for calculating mutually scattering waves. Most typical procedures like Runge-Kutta methods for differential equations proved to be unstable for considered cases. Consequently, we use a semi-implicit procedure for making a time domain step. Additionally, electromagnetic waves that propagate in different directions complicate splitting the step procedure into separate procedures for separate spatial regions for multithreading.
 
 This part of the project is split into following files:
 
@@ -48,7 +48,7 @@ EquOptic2DMasterForm, EquOpticTask, EquOptic2D, EquOptic2D_1DwB, EquOptic2D_1DwB
 As mentioned before, this project became the basis for my Master and Ph.D. degrees works as well as a variety of published scientific articles. Most of the articles can be found here:
 https://www.researchgate.net/scientific-contributions/V-R-Baryshev-32973328
 
-With that being said, I must admit that both the project structure and its C++ Builder platform are a bit outdated. Partially, this is a result of the project's 20 years lifespan. Something was being constantly altered and added for this whole time and it creates a mess. Also, with me being the sole owner, producer, designer, QA and end user, it was tempting to skip some household cleaning with "I only need to run it once and get the result" attitude. This approach gave way for even more mess, regrettably.
+With that being said, I must admit that both the project structure and its C++ Builder platform are quite outdated. Partially, this is a result of the project's 20 years lifespan. Something was being altered and added during this whole time and that creates a mess. Also, with me being the sole owner, producer, designer, QA and end user, it was tempting to skip some household cleaning with "I only need to run it once and get the result" attitude. Regrettably, this gave way for some more mess.
 
 
 
