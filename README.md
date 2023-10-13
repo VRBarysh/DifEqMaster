@@ -51,5 +51,5 @@ https://www.researchgate.net/scientific-contributions/V-R-Baryshev-32973328
 With that being said, I must admit that both the project structure and its C++ Builder platform are quite outdated. Partially, this is a result of the project's 20 years lifespan. Something was being altered and added during this whole time and that creates a mess. Also, with me being the sole owner, producer, designer, QA and end user, it was tempting to skip some household cleaning with "I only need to run it once and get the result" attitude. Regrettably, this gave way for some more mess.
 
 
-
+This application is to be compiled with Borland C++ Bulilder v6 or later versions.
 
